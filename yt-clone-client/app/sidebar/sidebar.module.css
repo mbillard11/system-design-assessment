@@ -1,0 +1,93 @@
+.sidebar {
+  width: 240px;
+  background-color: #f9f9f9;
+  color: #030303;
+  padding: 10px 0; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  overflow-y: auto; 
+  top: 0;
+  left: 0; 
+  height: 100vh; 
+}
+
+.sidebar.closed {
+  width: 72px;
+}
+
+.sidebarHeader {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.sidebarHeader h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+.sidebarSection {
+  margin-bottom: 15px; 
+}
+
+.sectionTitle {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #606060; 
+  padding: 0 20px 5px; 
+  margin: 0;
+   .closed & { 
+     display: none;
+   }
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center; 
+  padding: 10px 20px; 
+  text-decoration: none;
+  color: inherit; 
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #eee; 
+}
+
+.itemIcon {
+  font-size: 1.2em;
+  margin-right: 15px;
+  width: 24px; 
+  text-align: center;
+}
+
+.itemLabel {
+  font-size: 0.9em;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  .closed & { 
+    display: none;
+  }
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #e0e0e0; 
+  margin: 10px 0;
+}
+
+.closed .sidebarItem {
+    flex-direction: column; 
+    padding: 10px 0; 
+    justify-content: center;
+    text-align: center;
+}
+
+.closed .itemIcon {
+    margin-right: 0; 
+    margin-bottom: 5px; 
+}

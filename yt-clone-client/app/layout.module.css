@@ -1,0 +1,29 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+   width: 240px; 
+   transition: width 0.3s ease-in-out;
+}
+
+.sidebar.closed {
+  width: 72px;
+}
+
+.layoutContainer {
+  display: flex; 
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1; 
+  padding-top: var(--navbar-height, 60px); 
+  padding-left: 72px;
+  transition: padding-left 0.3s ease-in-out; 
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 100%; 
+  box-sizing: border-box;
+}
