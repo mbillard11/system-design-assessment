@@ -163,6 +163,7 @@ Update user info.
 # Instructions to Run
 
 The demo app is live here: [Youtube Clone](https://yt-clone-client-318307598992.northamerica-northeast1.run.app/)
+
 It was containerized using Docker, and deployed using Google Cloud Run.
 
 Alternatively, the app can be ran locally by following these steps:
