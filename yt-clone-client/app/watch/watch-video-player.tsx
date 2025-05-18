@@ -1,6 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
+import styles from './watch-video-player.module.css';
 
 interface WatchVideoPlayerProps {
   videoUrl: string;
@@ -15,8 +16,8 @@ export default function WatchVideoPlayer({ videoUrl }: WatchVideoPlayerProps ) {
   }
 
   return (
-    <div>
-      <video controls src={videoUrl} style={{ maxWidth: '100%' }}/>
+    <div className={styles.playerContainer}>
+      <video className={styles.videoElement} controls src={videoUrl}/>
     </div>
   );
 }

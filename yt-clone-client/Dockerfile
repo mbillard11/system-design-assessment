@@ -32,6 +32,9 @@ RUN npm install --only=production
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 
+# Copy config files for loading Pexels thumbnails
+COPY --from=builder /app/next.config.ts ./next.config.ts
+
 # Expose the listening port
 EXPOSE 3000
 
