@@ -26,11 +26,10 @@ export default function Sidebar() {
 
 
   return (
-    // Apply conditional class based on isOpen prop for styling
-    <div className={styles.closed}>
-
+    <div>
       {/* Main navigation section */}
       <div className={styles.sidebarSection}>
+        <h3 className={styles.sectionTitle}>Feeds</h3>
         {mainItems.map(item => (
           // Using a simple anchor tag for now, replace with Next.js Link
           <a key={item.id} href={item.link} className={styles.sidebarItem}>
