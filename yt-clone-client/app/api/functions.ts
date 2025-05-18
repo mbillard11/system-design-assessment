@@ -1,3 +1,4 @@
+// This is bad practice, but I'll keep it here for the demo
 const PEXELS_API_KEY = "mxlMopJRMc4JxxkVeEjKzd7h3htttPwOW7FlZOUftLzOc6igaKYtDNlG";
 
 

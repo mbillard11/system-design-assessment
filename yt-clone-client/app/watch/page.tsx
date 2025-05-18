@@ -3,13 +3,12 @@ import WatchVideoPlayer from './watch-video-player';
 import { getVideo } from '@/app/api/functions';
 
 interface WatchPageProps {
-  searchParams: {
-    v?: string;
-  };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  searchParams: any;
 }
 
 export default async function Watch( { searchParams }:  WatchPageProps ) {
-  const videoId = searchParams.v;
+  const videoId = searchParams.v as string | undefined;
   const video = await getVideo(videoId!); 
   console.log("Fetched video object:", video.id);
   const video_url = video.video_files[0].link
